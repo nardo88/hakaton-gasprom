@@ -371,6 +371,7 @@
     &__bottom {
 
         max-height: 0;
+        transition: .3s;
 
         &-wr {
             padding: 20px;
