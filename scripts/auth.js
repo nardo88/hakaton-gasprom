@@ -23,7 +23,10 @@ document.addEventListener('submit', e => {
     })
 
     .then(data => {
-        localStorage.setItem('auth', JSON.stringify(data));
-        location.pathname = 'dushboard.html'
+        if (data){
+            localStorage.setItem('auth', JSON.stringify(data));
+            location.pathname = 'dushboard.html'
+
+        }
     })
 })

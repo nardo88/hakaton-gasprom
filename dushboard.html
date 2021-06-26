@@ -10,9 +10,11 @@
 <body>
 
     <script>
-        if(!localStorage.getItem('auth')){
-            location.pathname = 'auth.html'
+        const data = JSON.parse(localStorage.getItem('auth'))
+        if(!data){
+            location.pathname = 'index.html'
         }
+
     </script>
 
     <header class="header">
