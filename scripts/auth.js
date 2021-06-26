@@ -10,23 +10,25 @@ document.addEventListener('submit', e => {
     }
 
     fetch('http://e685001fd2d9.ngrok.io/api/v1/auth', {
-        method: 'POST',
-        body: JSON.stringify(body)
+            method: 'POST',
+            body: JSON.stringify(body)
 
-    })
-    .then(response => {
-        if(response.ok){
-            return response.json()
-        } else {
-            alert('Неверный логин или пароль');
-        }
-    })
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                alert('Неверный логин или пароль');
+            }
+        })
 
-    .then(data => {
-        if (data){
-            localStorage.setItem('auth', JSON.stringify(data));
-            location.pathname = 'dushboard.html'
+        .then(data => {
+            if (data) {
+                passwors.value = ''
+                login.value = ''
+                localStorage.setItem('auth', JSON.stringify(data));
+                location.pathname = 'dushboard.html'
 
-        }
-    })
+            }
+        })
 })
