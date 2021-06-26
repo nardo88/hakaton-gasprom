@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Хакатон - Газпром</title>
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
 
+    <script>
+        if(localStorage.getItem('auth')){
+            location.pathname = 'dushboard.html'
+        }
+    </script>
 
-    
 
+    <div class="auth">
+        <div class="auth__welcome">
+            <h1 class="auth__title">Добро пожаловать в ГазпромНефть</h1>
+            <p class="auth__description">Приумножая победы России!</p>
+        </div>
+        <div class="auth__content">
+            <div class="auth__logo">Лого</div>
+            <h2 class="auth__form-title">Авторизация</h2>
+            <form action="#" class="auth__form auth-form">
+                <div class=" auth-form__item auth-form__item--radio">
+                    <input id="admin" name="role" type="radio" checked>
+                    <label class="auth-form__label-radio" for="admin">Администратор</label>
 
-    <script src="./scripts/main.js"></script>
+                    <input id="provider" name="role" type="radio">
+                    <label class="auth-form__label-radio" for="provider">Поставщик</label>
+                    
+                </div>
+
+                <div class="auth-form__item">
+                    <label class="auth-form__label" for="login">Логин</label>
+                    <input class="auth-form__input" id="login" type="text" name="login" placeholder="login" required>
+
+                </div>
+
+                <div class="auth-form__item">
+                    <label class="auth-form__label" for="passwors">Пароль</label>
+                    <input class="auth-form__input" id="passwors" type="password" name="login" placeholder="password" required>
+
+                </div>
+
+                <div class="auth-form__item">
+                    <button class="auth-form__btn">Вход</button>
+                </div>
+            </form>
+            <div class="auth__alternative alternative">
+                <button class="alternative__facebok alternative__btn">Facebook</button>
+                <button class="alternative__google alternative__btn">Google</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/auth.js"></script>
 </body>
-
 </html>
