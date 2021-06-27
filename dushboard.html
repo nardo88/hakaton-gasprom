@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,30 @@
     <title>Dushboard</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
     <script>
         const data = JSON.parse(localStorage.getItem('auth'))
-        if(!data){
+        if (!data) {
             location.pathname = 'index.html'
         }
-
     </script>
 
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__info">
-                    <div class="logo">Лого</div>
-                    <div class="header__organization">Название организации</div>
+                    <div class="logo"><img src="./img/logo.png" alt="logo"></div>
+                    <div class="header__organization">ООО Нефтепродукт</div>
+                    <div class="add">
+                        <img src="./img/add.png" alt="add">
+                        <span>Новый документ</span>
+                        <input type="file">
+                    </div>
                 </div>
+
+
                 <div class="header__lk">
                     <button class="header__ring"></button>
 
@@ -51,19 +59,24 @@
                 <div class="control__content">
                     <ul class="control__list">
                         <li class="control__item control__item--active">
+                            <img src="./img/dushboard/document.png" alt="document">
                             <a href="#!" class="control__link">Документы в системе</a>
                         </li>
                         <li class="control__item">
+                            <img src="./img/dushboard/equipment.png" alt="equipment">
+
                             <a href="#!" class="control__link">Оборудование</a>
                         </li>
                         <li class="control__item">
+                            <img src="./img/dushboard/archive.png" alt="archive">
+
                             <a href="#!" class="control__link">Архив</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-         
+
 
             <div class="control__bottom control-bottom ">
                 <ul class="control-bottom__list">
@@ -82,102 +95,218 @@
         </div>
 
         <div class="dushboard__content dushboard-content">
+
+
             <div class="dushboard-content__item ">
                 <div class="documents">
                     <div class="documents__wrapper">
                         <div class="documents__content">
                             <ul class="documents__list">
                                 <li class="documents__item document">
-                                    <div class="document__top">
+                                    <div class="document__column">
                                         <span class="document__name">Акт выполненных работ</span>
-                                        <span class="document__status close">Закрыт</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+
+                                            <button class="document__btn">В архив</button>
+                                        </div>
                                     </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                        <button class="document__btn">В архив</button>
+
+                                    <div class="document__column">
+                                        <span class="document__status close">Закрыт</span>
                                         <span class="document__date">дата загрузки: 22.06.2021</span>
                                     </div>
                                 </li>
 
                                 <li class="documents__item document">
-                                    <div class="document__top">
+                                    <div class="document__column">
+                                        <span class="document__name">Акт приема-передачи</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+
+                                            <button class="document__btn">В архив</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="document__column">
+                                        <span class="document__status in-work">В работе</span>
+                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+                                    </div>
+                                </li>
+
+                                <li class="documents__item document">
+                                    <div class="document__column">
+                                        <span class="document__name">Договор на оказание услуг</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+
+                                            <button class="document__btn">В архив</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="document__column">
+                                        <span class="document__status sent">Отправлен</span>
+                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+                                    </div>
+                                </li>
+
+                                <li class="documents__item document">
+                                    <div class="document__column">
                                         <span class="document__name">Акт выполненных работ</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+
+                                            <button class="document__btn">В архив</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="document__column">
+                                        <span class="document__status close">Закрыт</span>
+                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+                                    </div>
+                                </li>
+
+                                <li class="documents__item document">
+                                    <div class="document__column">
+                                        <span class="document__name">Акт приема-передачи</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+
+                                            <button class="document__btn">В архив</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="document__column">
+                                        <span class="document__status in-work">В работе</span>
+                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+                                    </div>
+                                </li>
+
+                                <li class="documents__item document">
+                                    <div class="document__column">
+                                        <span class="document__name">Договор на оказание услуг</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+
+                                            <button class="document__btn">В архив</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="document__column">
+                                        <span class="document__status sent">Отправлен</span>
+                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+                                    </div>
+                                </li>
+
+                                <li class="documents__item document">
+                                    <div class="document__column">
+                                        <span class="document__name">Акт выполненных работ</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+
+                                            <button class="document__btn">В архив</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="document__column">
+                                        <span class="document__status close">Закрыт</span>
+                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+                                    </div>
+                                </li>
+
+
+
+
+                            </ul>
+                        </div>
+                        <div class="documents__info">
+                            <div class="dropdown">
+                                <div class="dropdown__top">
+                                    <h4 class="dropdown__title">Техподдержка</h4>
+                                    <a href="tel:+79123456789" class="dropdown__phone">+7 912 345 67 89</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="dushboard-content__item ">
+                <div class="documents">
+                    <div class="documents__wrapper">
+                        <div class="documents__content">
+                            <ul class="documents__list">
+
+                                <li class="documents__item document  equipment">
+                                    <div class="document__column">
+                                        <span class="document__name">Сборка DN475-50-2200</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">Месторождение_З Скважина №1Р</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="document__column">
                                         <span class="document__status in-work">В работе</span>
                                     </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                        <button class="document__btn">В архив</button>
-                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+                                </li>
+
+                                <li class="documents__item document  equipment">
+                                    <div class="document__column">
+                                        <span class="document__name">Сборка VSP-7/11</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">Месторождение_З Скважина №3Р</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="document__column">
+                                        <span class="document__status in-work">В работе</span>
                                     </div>
                                 </li>
 
-                                <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Акт выполненных работ</span>
-                                        <span class="document__status sent">Отправлен</span>
+                                <li class="documents__item document equipment">
+                                    <div class="document__column">
+                                        <span class="document__name">Сборка 0415ЭЦНАКИ5-50-2600</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">Месторождение_З Скважина №15Р</span>
+                                        </div>
                                     </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                        <button class="document__btn">В архив</button>
-                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+
+                                    <div class="document__column">
+                                        <span class="document__status in-work">В работе</span>
                                     </div>
                                 </li>
 
-                                <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Акт выполненных работ</span>
-                                        <span class="document__status close">Закрыт</span>
+                                <li class="documents__item document equipment">
+                                    <div class="document__column">
+                                        <span class="document__name">Сборка 17022021</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">Месторождение_З Скважина №18Р</span>
+                                        </div>
                                     </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                        <button class="document__btn">В архив</button>
-                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+
+                                    <div class="document__column">
+                                        <span class="document__status close">Остановлена</span>
                                     </div>
                                 </li>
 
-                                <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Акт выполненных работ</span>
-                                        <span class="document__status close">Закрыт</span>
-                                    </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                        <button class="document__btn">В архив</button>
-                                        <span class="document__date">дата загрузки: 22.06.2021</span>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                         <div class="documents__info">
                             <div class="dropdown">
                                 <div class="dropdown__top">
-                                    <h4 class="dropdown__title">Возник вопрос?</h4>
-                                    <span class="dropdown__arrow"></span>
-                                </div>
-                                <div class="dropdown__bottom"></div>
-                            </div>
-
-
-                            <div class="dropdown">
-                                <div class="dropdown__top">
                                     <h4 class="dropdown__title">Техподдержка</h4>
-                                    <span class="dropdown__arrow"></span>
+                                    <a href="tel:+79123456789" class="dropdown__phone">+7 912 345 67 89</a>
+
                                 </div>
-                                <div class="dropdown__bottom">
-                                    <div class="dropdown__bottom-wr">
-                                        <a href="tel:+79123456789" class="dropdown__phone">+7 912 345 67 89</a>
-                                        <a href="#!" class="dropdown__link">Заказать обратный звонок</a>
-                                        <a href="mailto:support@mail.ru" class="dropdown__mail">support@mail.ru</a>
-                                    </div>
-                                    
-                                </div>
+
                             </div>
+
                         </div>
                     </div>
-                    <div class="documents__add">
-                        <button class="add"></button>
-                        <h3 class="add-title">Новый документ</h3>
-                    </div>
+
                 </div>
 
             </div>
@@ -187,207 +316,311 @@
                     <div class="documents__wrapper">
                         <div class="documents__content">
                             <ul class="documents__list">
-                                <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Штанговый глубинный насос</span>
-                                        <span class="document__status close">На ремонте</span>
-                                    </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                    </div>
-                                </li>
 
                                 <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Штанговый глубинный насос</span>
-                                        <span class="document__status in-work">Активный</span>
-                                    </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                    </div>
-                                </li>
-
-                                <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Штанговый глубинный насос</span>
-                                        <span class="document__status sent">На техническом обслуживании</span>
-                                    </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                    </div>
-                                </li>
-
-                                <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Штанговый глубинный насос</span>
-                                        <span class="document__status close">На ремонте</span>
-                                    </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                    </div>
-                                </li>
-
-                                <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Штанговый глубинный насос</span>
-                                        <span class="document__status in-work">Активный</span>
-                                    </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                    </div>
-                                </li>
-
-                                <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Штанговый глубинный насос</span>
-                                        <span class="document__status sent">На техническом обслуживании</span>
-                                    </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
-                                    </div>
-                                </li>
-
-                               
-
-                            </ul>
-                        </div>
-                        <div class="documents__info">
-
-                            <div class="dropdown">
-                                <div class="dropdown__top">
-                                    <h4 class="dropdown__title">Возник вопрос?</h4>
-                                    <span class="dropdown__arrow"></span>
-                                </div>
-                                <div class="dropdown__bottom"></div>
-                            </div>
-
-
-                          <div class="dropdown">
-                                <div class="dropdown__top">
-                                    <h4 class="dropdown__title">Техподдержка</h4>
-                                    <span class="dropdown__arrow"></span>
-                                </div>
-                                <div class="dropdown__bottom">
-                                    <div class="dropdown__bottom-wr">
-                                        <a href="tel:+79123456789" class="dropdown__phone">+7 912 345 67 89</a>
-                                        <a href="#!" class="dropdown__link">Заказать обратный звонок</a>
-                                        <a href="mailto:support@mail.ru" class="dropdown__mail">support@mail.ru</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-
-            </div>
-
-            <div class="dushboard-content__item ">
-                <div class="documents">
-                    <div class="documents__wrapper">
-                        <div class="documents__content">
-                            <ul class="documents__list">
-                                <li class="documents__item document">
-                                    <div class="document__top">
+                                    <div class="document__column">
                                         <span class="document__name">Акт выполненных работ</span>
-                                        <button class="document__btn">Извлечь из аврхива</button>
-
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+                                        </div>
                                     </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
+                                    <div class="document__column">
+                                        <button class="document__btn document__btn--mb">Извлечь из аврхива</button>
                                         <span class="document__date">дата загрузки: 22.06.2021</span>
                                     </div>
                                 </li>
 
                                 <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Акт выполненных работ</span>
-                                        <button class="document__btn">Извлечь из аврхива</button>
-
+                                    <div class="document__column">
+                                        <span class="document__name">Акт приема-передачи</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+                                        </div>
                                     </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
+                                    <div class="document__column">
+                                        <button class="document__btn document__btn--mb">Извлечь из аврхива</button>
                                         <span class="document__date">дата загрузки: 22.06.2021</span>
                                     </div>
                                 </li>
 
                                 <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Акт выполненных работ</span>
-                                        <button class="document__btn">Извлечь из аврхива</button>
-
+                                    <div class="document__column">
+                                        <span class="document__name">Договор на оказание услуг</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+                                        </div>
                                     </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
+                                    <div class="document__column">
+                                        <button class="document__btn document__btn--mb">Извлечь из аврхива</button>
                                         <span class="document__date">дата загрузки: 22.06.2021</span>
                                     </div>
                                 </li>
 
                                 <li class="documents__item document">
-                                    <div class="document__top">
+                                    <div class="document__column">
                                         <span class="document__name">Акт выполненных работ</span>
-                                        <button class="document__btn">Извлечь из аврхива</button>
-
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+                                        </div>
                                     </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
+                                    <div class="document__column">
+                                        <button class="document__btn document__btn--mb">Извлечь из аврхива</button>
                                         <span class="document__date">дата загрузки: 22.06.2021</span>
                                     </div>
                                 </li>
 
                                 <li class="documents__item document">
-                                    <div class="document__top">
-                                        <span class="document__name">Акт выполненных работ</span>
-                                        <button class="document__btn">Извлечь из аврхива</button>
-
+                                    <div class="document__column">
+                                        <span class="document__name">Акт приема-передачи</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+                                        </div>
                                     </div>
-                                    <div class="document__bottom">
-                                        <span class="document__number">№ 23-СН098</span>
+                                    <div class="document__column">
+                                        <button class="document__btn document__btn--mb">Извлечь из аврхива</button>
                                         <span class="document__date">дата загрузки: 22.06.2021</span>
                                     </div>
                                 </li>
 
-                            
-                             
+                                <li class="documents__item document">
+                                    <div class="document__column">
+                                        <span class="document__name">Договор на оказание услуг</span>
+                                        <div class="document__bottom">
+                                            <span class="document__number">№ 23-СН098</span>
+                                        </div>
+                                    </div>
+                                    <div class="document__column">
+                                        <button class="document__btn document__btn--mb">Извлечь из аврхива</button>
+                                        <span class="document__date">дата загрузки: 22.06.2021</span>
+                                    </div>
+                                </li>
+
+
+
+
+
+
+
                             </ul>
                         </div>
                         <div class="documents__info">
                             <div class="dropdown">
                                 <div class="dropdown__top">
-                                    <h4 class="dropdown__title">Возник вопрос?</h4>
-                                    <span class="dropdown__arrow"></span>
-                                </div>
-                                <div class="dropdown__bottom"></div>
-                            </div>
-
-
-                            <div class="dropdown">
-                                <div class="dropdown__top">
                                     <h4 class="dropdown__title">Техподдержка</h4>
-                                    <span class="dropdown__arrow"></span>
+                                    <a href="tel:+79123456789" class="dropdown__phone">+7 912 345 67 89</a>
+
                                 </div>
-                                <div class="dropdown__bottom">
-                                    <div class="dropdown__bottom-wr">
-                                        <a href="tel:+79123456789" class="dropdown__phone">+7 912 345 67 89</a>
-                                        <a href="#!" class="dropdown__link">Заказать обратный звонок</a>
-                                        <a href="mailto:support@mail.ru" class="dropdown__mail">support@mail.ru</a>
-                                    </div>
-                                    
-                                </div>
+
                             </div>
                         </div>
                     </div>
-                  
+
                 </div>
 
             </div>
-          
+
+
+            <!--  -->
+            <div class="dushboard-content__item-info equipment">
+                <div class="equipment__wrapper">
+                    <div class="equipment__column">
+
+                        <div class="equipment__data">
+                            <div class="equipment__head">
+                                <h3 class="equipment__title">Секции ЭЦН</h3>
+                                <h4 class="equipment__subtitle">Типоразмер: D460N</h4>
+                            </div>
+                            <div class="equipment__parametrs">
+                                <ul class="equipment__list">
+                                    <li class="equipment__list-item">
+                                        <span class="equipment__properties">Шифр насоса:</span>
+                                        <span class="equipment__value">ЭЦНМ5А–10-1100</span>
+                                    </li>
+    
+                                    <li class="equipment__list-item">
+                                        <span class="equipment__properties">К.П.Д.:</span>
+                                        <span class="equipment__value">28%</span>
+                                    </li>
+    
+                                    <li class="equipment__list-item">
+                                        <span class="equipment__properties">Номинальная подача:</span>
+                                        <span class="equipment__value">10 м3/сут </span>
+                                    </li>
+    
+                                    <li class="equipment__list-item">
+                                        <span class="equipment__properties">Напор:</span>
+                                        <span class="equipment__value">1100 м</span>
+                                    </li>
+    
+                                    <li class="equipment__list-item">
+                                        <span class="equipment__properties">Число ступеней:</span>
+                                        <span class="equipment__value">254</span>
+                                    </li>
+    
+                                    <li class="equipment__list-item">
+                                        <span class="equipment__properties">Число секций:</span>
+                                        <span class="equipment__value">2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+    
+                        <div class="equipment__history history">
+                            <div class="history__head">
+                                <h3 class="history__title">История:</h3>
+                            </div>
+                            <div class="history__content">
+                                <ul class="history__list">
+                                    <li class="history__item">
+                                        <div class="history__data">
+                                            <span class="history__date">18.06.2021</span>
+                                            <span class="history__name">Акт приема передачи</span>
+                                            <span class="history__number">№ 23-СН098</span>
+                                        </div>
+                                        <div class="history__status">Загружен</div>
+                                    </li>
+    
+                                    <li class="history__item">
+                                        <div class="history__data">
+                                            <span class="history__date">20.06.2021</span>
+                                            <span class="history__name">Акт приема передачи</span>
+                                            <span class="history__number">№ 23-СН098</span>
+                                        </div>
+                                        <div class="history__status">Подтвержден</div>
+                                    </li>
+    
+                                    <li class="history__item">
+                                        <div class="history__data">
+                                            <span class="history__date">21.06.2021</span>
+                                            <span class="history__name">Паспорт оборудования</span>
+                                            <span class="history__number">№ 23-СН098</span>
+                                        </div>
+                                        <div class="history__status">Загружен</div>
+                                    </li>
+    
+                                    <li class="history__item">
+                                        <div class="history__data">
+                                            <span class="history__date">22.06.2021</span>
+                                            <span class="history__name">Технические требования</span>
+                                            <span class="history__number">№ 74Н</span>
+                                        </div>
+                                        <div class="history__status">Загружен</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="documents__info">
+                            <div class="dropdown">
+                                <div class="dropdown__top">
+                                    <h4 class="dropdown__title">Техподдержка</h4>
+                                    <a href="tel:+79123456789" class="dropdown__phone">+7 912 345 67 89</a>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <!-- Вторая колонка -->
+                    <div class="equipment__column">
+    
+                        <!-- Состояние -->
+                        <div class="equipment__state state">
+                            <ul class="state__list">
+                                <li class="state__item">
+                                    <span class="state__propertie">Состояние:</span>
+                                    <span class="state__value">Исправен</span>
+                                </li>
+    
+                                <li class="state__item">
+                                    <span class="state__propertie">Статус:</span>
+                                    <span class="state__value">Прошел обслуживание</span>
+                                </li>
+    
+                                <li class="state__item">
+                                    <span class="state__propertie">Жизненный цикл</span>
+                                    <span class="state__value">5 лет</span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <!-- Документы -->
+                        <div class="equipment__documents equipment-documents">
+                            <div class="equipment-documents__head">
+                                <h3 class="equipment-documents__title">Документы</h3>
+                                <div class="equipment-documents__add-document add">
+                                    <img src="./img/add.png" alt="add">
+                                    <span>Новый документ</span>
+                                    <input type="file">
+                                </div>
+                            </div>
+    
+                            <div class="equipment-documents__body">
+                                <ul class="equipment-documents__list">
+                                    <li class="equipment-documents__item">
+                                        <div class="equipment-documents__data">
+                                            <span class="equipment-documents__name">Акт приема передачи</span>
+                                            <span class="equipment-documents__number">№ 23-СН098</span>
+                                        </div>
+                                        <div class="equipment-documents__status">
+                                            <select name="" id="" class="equipment-documents__select">
+                                                <option selected value="confirmed">Подтвержден</option>
+                                                <option value="not confirmed">Не подтвержден</option>
+                                                <option value="consideration">На рассмотрении</option>
+                                            </select>
+                                        </div>
+                                    </li>
+    
+                                    <li class="equipment-documents__item">
+                                        <div class="equipment-documents__data">
+                                            <span class="equipment-documents__name">Паспорт оборудования</span>
+                                            <span class="equipment-documents__number">№ 1-0Р98</span>
+                                        </div>
+                                        <div class="equipment-documents__status">
+                                            <select name="" id="" class="equipment-documents__select">
+                                                <option value="confirmed">Подтвержден</option>
+                                                <option selected value="not confirmed">Не подтвержден</option>
+                                                <option value="consideration">На рассмотрении</option>
+                                            </select>
+                                        </div>
+                                    </li>
+    
+                                    <li class="equipment-documents__item">
+                                        <div class="equipment-documents__data">
+                                            <span class="equipment-documents__name">Технические требования</span>
+                                            <span class="equipment-documents__number">№ 74Н</span>
+                                        </div>
+                                        <div class="equipment-documents__status">
+                                            <select name="" id="" class="equipment-documents__select">
+                                                <option value="confirmed">Подтвержден</option>
+                                                <option value="not confirmed">Не подтвержден</option>
+                                                <option selected value="consideration">На рассмотрении</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+
+               
+
+
+
+            </div>
+
+
         </div>
     </div>
 
 
 
-   <script src="./scripts/dushboard.js"></script>
+    <script src="./scripts/dushboard.js"></script>
 </body>
+
 </html>

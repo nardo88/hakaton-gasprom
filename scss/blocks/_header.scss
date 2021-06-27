@@ -1,5 +1,5 @@
 .header {
-    background: #D6D6D6;
+    background: #ffffff;
 
     // .header__wrapper
 
@@ -7,7 +7,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 30px 0;
+        
     }
 
     // .header__info
@@ -21,12 +21,14 @@
 
     &__organization {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 20px;
         line-height: 23px;
         letter-spacing: 0.012em;
 
-        color: #000000;
+        /* Основной заготовок и текст */
+
+        color: #333333;
     }
 
     // .header__lk
@@ -77,20 +79,26 @@
 
 .container {
     width: 100%;
-    padding: 0 120px;
+    padding: 0 120px 0 0px;
 }
 
 .logo {
-    background: #888888;
-    padding: 14px 54px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
-    letter-spacing: 0.012em;
 
-    color: #FFFFFF;
-    margin-right: 48px;
+    display: inline-block;
+    padding: 27px 0;
+    
+    align-self: flex-start;
+    margin-right: 118px;
+    width: 303px;
+    display: flex;
+    justify-content: center;
+    border-right: .3px solid #929292;
+    border-bottom: .3px solid #929292;
+
+    img {
+        width: 163px;
+        height: 78px;
+    }
 }
 
 .user {}
@@ -100,4 +108,48 @@
     height: 25px;
     background: url(../img/log_out.png) no-repeat center;
     border: none;
+}
+
+
+
+.add {
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-left: 85px;
+    padding: 6px 11px;
+    background: #1E88E5;
+    border-radius: 5.24272px;
+    cursor: pointer;
+    position: relative;
+
+    img {
+        margin-right: 15px;
+
+    }
+
+    span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.012em;
+
+        color: #FFFFFF;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        font-size: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+    }
 }
