@@ -8,6 +8,11 @@
     background: #D6D6D6;
     overflow-y: auto;
     padding: 30px 120px 30px 40px;
+    display: none;
+
+    &--open{
+        display: block;
+    }
 
     &::-webkit-scrollbar-track {
         border-radius: 10px;
