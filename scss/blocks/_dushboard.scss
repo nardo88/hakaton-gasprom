@@ -218,14 +218,17 @@
     // .documents__item
 
     &__item {
-        background: #ffffff;
+        // background: #ffffff;
         margin-bottom: 15px;
         padding: 10px 20px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+        // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
         border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        background: linear-gradient(0deg, #FDFDFD, #FDFDFD);
+        box-shadow: -6px -2px 16px rgba(255, 255, 255, 0.8), 6px 2px 16px rgba(136, 165, 191, 0.48);
     }
 
 
@@ -335,7 +338,7 @@
 
         color: #FFFFFF;
 
-        &--mb{
+        &--mb {
             margin-bottom: 5px;
         }
     }
@@ -473,6 +476,6 @@
     }
 }
 
-.equipment-item{
+.equipment-item {
     cursor: pointer;
 }
