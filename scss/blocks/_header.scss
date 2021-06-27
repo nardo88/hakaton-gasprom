@@ -1,5 +1,5 @@
 .header {
-    background: #ffffff;
+    background: linear-gradient(180deg, #F1F5F8 0%, #EBF3FA 0.01%, #DDE7F3 53.92%, #E6F0F9 100%);
 
     // .header__wrapper
 
@@ -92,8 +92,8 @@
     width: 303px;
     display: flex;
     justify-content: center;
-    border-right: .3px solid #929292;
-    border-bottom: .3px solid #929292;
+    border-right: .3px solid #ffffff;
+    border-bottom: .3px solid #ffffff;
 
     img {
         width: 163px;
