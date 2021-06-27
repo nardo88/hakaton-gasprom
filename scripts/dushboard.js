@@ -1,8 +1,11 @@
 const dushboard = document.querySelector('.dushboard');
+const equipmentDocumentsList = document.querySelector('.equipment-documents__list');
+const equipment = document.querySelector('.equipment');
 const controlItem = document.querySelectorAll('.control__item');
 const dushboardContentItem = document.querySelectorAll('.dushboard-content__item');
 const documents = document.getElementById('documents')
 const archive = document.getElementById('archive')
+const addDocument = document.getElementById('add-document')
 
 let documentsList = [{
         id: 1,
@@ -185,7 +188,7 @@ const renderDocuments = (data) => {
                 </div>
             </div>
             <div class="document__column">
-                <span class="document__status ${item.status}">Закрыт</span>
+                <span class="document__status ${item.status}">${item.status === 'close' ? 'Закрыть' : item.status === 'sent' ? 'Отправлен' : 'В работе'}</span>
                 <span class="document__date">дата загрузки: ${item.date}</span>
             </div>
         `;
@@ -240,6 +243,8 @@ dushboard.addEventListener('click', e => {
     const target = e.target;
     if (target.closest('.control__item')) {
         e.preventDefault()
+        equipment.classList.remove('equipment--open')
+
         const elem = target.closest('.control__item')
         controlItem.forEach((item, i) => {
             item.classList.remove('control__item--active')
@@ -278,6 +283,10 @@ dushboard.addEventListener('click', e => {
         renderArchive(documentsList)
 
     }
+
+    if (target.closest('.equipment-item')){
+        equipment.classList.add('equipment--open')
+    }
 })
 
 
@@ -287,4 +296,30 @@ addActive(dushboardContentItem, 0, 'dushboard-content__item--active')
 document.querySelector('.logout').addEventListener('click', () => {
     localStorage.removeItem("auth")
     location.reload();
+})
+
+
+// добавление документа
+
+addDocument.addEventListener('change', e => {
+    const li = document.createElement('li')
+    li.classList = 'equipment-documents__item';
+    li.innerHTML = `
+        <div class="equipment-documents__data">
+            <span class="equipment-documents__name">${e.target.files[0].name.split('.')[0]}</span>
+            <span class="equipment-documents__number">№ 23-СН098</span>
+        </div>
+        <div class="equipment-documents__status">
+            <select name="" id="" class="equipment-documents__select">
+                <option selected value="confirmed">Подтвержден</option>
+                <option value="not confirmed">Не подтвержден</option>
+                <option value="consideration">На рассмотрении</option>
+            </select>
+        </div>
+    `
+
+    console.dir(e.target.files[0].name);
+
+
+    equipmentDocumentsList.insertAdjacentElement('afterbegin', li)
 })
